@@ -49,24 +49,28 @@ Note: This question is the same as 476: https://leetcode.com/problems/number-com
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.3 MB  
-**Submitted:** 2026-08-05T14:55:02.950Z  
+**Submitted:** 2026-08-05T14:56:10.379Z  
 
 ```java
-            if(rem == 0){
-                ans += Math.pow(2 , deg);
-            }
-            n /= 2 ;
-        }
+class Solution {
+    public int bitwiseComplement(int n) {
 
-            deg++;
-        return ans;
-            int rem = n % 2 ;
-        while(n > 0) {
+        int ans = 0 ;
+        int deg = 0 ;
 
-        int ans = 0 ;
-        int deg = 0 ;
+        while(n > 0) {
+            int rem = n % 2 ;
+            if(rem == 0){
+                ans += Math.pow(2 , deg);
+            }
+            n /= 2 ;
+            deg++;
+        }
 
-
+        return ans;
+        
+    }
+}
 ```
 
 ---
