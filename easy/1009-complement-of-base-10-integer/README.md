@@ -47,9 +47,9 @@ Note: This question is the same as 476: https://leetcode.com/problems/number-com
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 42.3 MB (beats 18.44%)  
-**Submitted:** 2026-08-05T14:57:28.091Z  
+**Runtime:** 0 ms  
+**Memory:** 41.7 MB  
+**Submitted:** 2026-08-05T14:56:51.700Z  
 
 ```java
 class Solution {
@@ -57,9 +57,6 @@ class Solution {
 
         int ans = 0 ;
         int deg = 0 ;
-
-        if(n == 0 )
-            return 1 ;
 
         while(n > 0) {
             int rem = n % 2 ;
