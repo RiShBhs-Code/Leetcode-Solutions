@@ -75,14 +75,23 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.3 MB  
-**Submitted:** 2026-08-18T18:03:12.297Z  
+**Memory:** 41.9 MB  
+**Submitted:** 2026-08-18T18:06:53.610Z  
 
 ```java
 class Solution {
     public int largestInteger(int[] nums, int k) {
 
         int[] arr = new int[51];
+
+        int maxx = Integer.MIN_VALUE;
+        if(k == nums.length ) {
+            for(int num : nums) {
+                maxx = Math.max(maxx , num);
+            }
+            return maxx;
+            
+        }
 
         for(int a : nums) {
             arr[a]++;
