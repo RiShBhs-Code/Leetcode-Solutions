@@ -3,6 +3,15 @@ class Solution {
 
         int[] arr = new int[51];
 
+        int maxx = Integer.MIN_VALUE;
+        if(k == nums.length ) {
+            for(int num : nums) {
+                maxx = Math.max(maxx , num);
+            }
+            return maxx;
+            
+        }
+
         for(int a : nums) {
             arr[a]++;
         }
