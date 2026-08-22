@@ -51,25 +51,35 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.1 MB  
-**Submitted:** 2026-08-22T12:40:24.015Z  
+**Runtime:** 1 ms (beats 25.54%)  
+**Memory:** 42.7 MB (beats 9.96%)  
+**Submitted:** 2026-08-22T12:40:36.390Z  
 
 ```java
-    private static int value(int n){
+class Solution {
+    public boolean checkDivisibility(int n) {
 
-    }
-        
-        int val = value(n);
+        int val = value(n);
 
-    public boolean checkDivisibility(int n) {
-class Solution {
+        if(n % val == 0) 
+            return true;
+        
+        return false;
+        
+    }
 
-        if(n % val == 0) 
-            return true;
-        
-        return false;
+    private static int value(int n){
+        int sum = 0 , mulfac = 1;
+        while(n>0){
+            int digit = n % 10;
+            sum += digit;
+            mulfac *= digit;
+            n /= 10;
+        }
 
+        return sum+mulfac;
+    }
+}
 ```
 
 ---
