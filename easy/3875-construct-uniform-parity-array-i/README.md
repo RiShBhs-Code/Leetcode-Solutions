@@ -62,8 +62,8 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-09-02T15:02:50.996Z  
+**Memory:** 42.6 MB  
+**Submitted:** 2026-09-02T15:03:37.367Z  
 
 ```java
         int odd = 0 ;
@@ -74,9 +74,10 @@ Constraints:
             else 
                 odd++;
 
-        if ( even > odd)
+        if ( even > odd && even > 0 && odd > 0)
             return false;
         int even = 0 ;
+    public boolean uniformArray(int[] nums1) {
         
         return true;
 
