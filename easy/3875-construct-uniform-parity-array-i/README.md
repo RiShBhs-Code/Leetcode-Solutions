@@ -61,9 +61,9 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-09-02T15:30:55.820Z  
+**Runtime:** 1 ms (beats 31.89%)  
+**Memory:** 45.2 MB (beats 35.83%)  
+**Submitted:** 2026-09-02T15:31:03.402Z  
 
 ```java
 class Solution {
@@ -77,10 +77,10 @@ class Solution {
                 odd++;
         }
 
-        if ( even > odd && even > 0 && odd > 0)
-            return false;
+        if(odd > 0 || (odd == 0 && even >0)) 
+            return true;
         
-        return true;
+        return false;
     }
 }
 ```
