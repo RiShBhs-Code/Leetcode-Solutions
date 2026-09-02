@@ -62,25 +62,27 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.6 MB  
-**Submitted:** 2026-09-02T15:03:37.367Z  
+**Memory:** 42.5 MB  
+**Submitted:** 2026-09-02T15:04:10.696Z  
 
 ```java
-        int odd = 0 ;
-        for(int num : nums1) {
-            if(num % 2 == 0)
-                even++;
-        }
-            else 
-                odd++;
+class Solution {
+    public boolean uniformArray(int[] nums1) {
+        int even = 0 ;
+        int odd = 0 ;
+        for(int num : nums1) {
+            if(num % 2 == 0)
+                even++;
+            else 
+                odd++;
+        }
 
-        if ( even > odd && even > 0 && odd > 0)
-            return false;
-        int even = 0 ;
-    public boolean uniformArray(int[] nums1) {
-        
-        return true;
-
+        if ( even > odd && even > 0 && odd > 0)
+            return false;
+        
+        return true;
+    }
+}
 ```
 
 ---
