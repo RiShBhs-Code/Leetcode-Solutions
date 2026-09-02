@@ -6,8 +6,9 @@
             else 
                 odd++;
 
-        if ( even > odd)
+        if ( even > odd && even > 0 && odd > 0)
             return false;
         int even = 0 ;
+    public boolean uniformArray(int[] nums1) {
         
         return true;
