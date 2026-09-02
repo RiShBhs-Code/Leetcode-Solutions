@@ -9,9 +9,9 @@ class Solution {
                 odd++;
         }
 
-        if ( even > odd && even > 0 && odd > 0)
-            return false;
+        if(odd > 0 || (odd == 0 && even >0)) 
+            return true;
         
-        return true;
+        return false;
     }
 }
