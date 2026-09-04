@@ -80,23 +80,22 @@ Constraints:
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.5 MB  
-**Submitted:** 2026-09-04T17:12:28.450Z  
+**Submitted:** 2026-09-04T17:08:43.868Z  
 
 ```java
-        for(int j = n - 1 ; j >= 0 ; j--){
-            min = Math.min(min , nums[j]);
-            int temp = arr[j] - min ;
-            if(temp < x){
-                x = temp;
-            }
-        }
 
-        int x = Integer.MAX_VALUE;
         int min = Integer.MAX_VALUE;
         int ans = -1;
-                ans = j;
+
+        for(int j = n - 1 ; j >= 0 ; j--){
+            min = Math.min(min , nums[j]);
 
         System.out.println(Arrays.toString(arr));
+        }
+            }
+                arr[i] = arr[i-1];
+            } else {
+                arr[i] = nums[i];
 
 ```
 
