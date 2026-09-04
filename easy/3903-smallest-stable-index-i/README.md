@@ -80,23 +80,23 @@ Constraints:
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.6 MB  
-**Submitted:** 2026-09-04T17:11:59.636Z  
+**Submitted:** 2026-09-04T17:13:28.671Z  
 
 ```java
+        int x = Integer.MAX_VALUE;
+        int ans = -1;
+
         for(int j = n - 1 ; j >= 0 ; j--){
             min = Math.min(min , nums[j]);
             int temp = arr[j] - min ;
-            if(temp <= x){
+            if(temp < k){
                 x = temp;
+                ans = j;
             }
         }
         return ans;   
     }
-
-        int x = Integer.MAX_VALUE;
-        int min = Integer.MAX_VALUE;
-        int ans = -1;
-                ans = j;
+}
 
 ```
 
