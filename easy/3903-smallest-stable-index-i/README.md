@@ -79,19 +79,19 @@ Constraints:
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 42.3 MB  
-**Submitted:** 2026-09-04T17:07:49.744Z  
+**Memory:** 42.7 MB  
+**Submitted:** 2026-09-04T17:10:29.162Z  
 
 ```java
 
+        System.out.println(Arrays.toString(arr));
+
         int min = Integer.MAX_VALUE;
-        int ans = -1;
+        int ans = Integer.MAX_VALUE;
 
         for(int j = n - 1 ; j >= 0 ; j--){
             min = Math.min(min , nums[j]);
             int temp = arr[j] - min ;
-
-        System.out.println(arr);
             if(temp <= ans){
                 ans = temp;
             }
