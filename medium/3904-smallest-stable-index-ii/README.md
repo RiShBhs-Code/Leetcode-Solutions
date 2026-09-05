@@ -78,25 +78,41 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.5 MB  
-**Submitted:** 2026-09-05T07:07:33.646Z  
+**Runtime:** 4 ms (beats 88.55%)  
+**Memory:** 133.3 MB (beats 20.99%)  
+**Submitted:** 2026-09-05T07:07:47.887Z  
 
 ```java
-            }
-                arr[i] = arr[i-1];
-            if(nums[i] >= arr[i-1]){
-                arr[i] = nums[i];
-            } else {
-        for(int i = 1 ; i < n ; i++){
+class Solution {
+    public int firstStableIndex(int[] nums, int k) {
 
-        arr[0] = nums[0];
-        int[] arr = new int[n];
-        int n = nums.length;
+        int n = nums.length;
+        int[] arr = new int[n];
+        arr[0] = nums[0];
 
-    public int firstStableIndex(int[] nums, int k) {
-class Solution {
+        for(int i = 1 ; i < n ; i++){
+            if(nums[i] >= arr[i-1]){
+                arr[i] = nums[i];
+            } else {
+                arr[i] = arr[i-1];
+            }
+        }
 
+        int min = Integer.MAX_VALUE;
+        int x = Integer.MAX_VALUE;
+        int ans = -1;
+
+        for(int j = n - 1 ; j >= 0 ; j--){
+            min = Math.min(min , nums[j]);
+            int temp = arr[j] - min ;
+            if(temp <= k){
+                x = temp;
+                ans = j;
+            }
+        }
+        return ans;   
+    }
+}
 ```
 
 ---
