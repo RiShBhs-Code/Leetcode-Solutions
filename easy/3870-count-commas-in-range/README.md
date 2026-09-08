@@ -49,20 +49,19 @@ Constraints:
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.1 MB  
-**Submitted:** 2026-09-08T17:07:04.995Z  
+**Runtime:** 1 ms (beats 83.65%)  
+**Memory:** 42.4 MB (beats 85.26%)  
+**Submitted:** 2026-09-08T17:07:14.367Z  
 
 ```java
-class Solution {
-    public int countCommas(int n) {
-        if(n < 1000)    
-            return 0;
-    }
-        
-        return n - 999 ;
+class Solution {
+    public int countCommas(int n) {
+        if(n < 1000)    
+            return 0;
+        
+        return n - 999 ;
+    }
 }
-
 ```
 
 ---
