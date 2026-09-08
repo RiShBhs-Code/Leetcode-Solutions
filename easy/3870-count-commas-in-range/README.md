@@ -49,18 +49,18 @@ Constraints:
 ## Solution
 
 **Language:** Go  
-**Runtime:** 0 ms  
-**Memory:** 4 MB  
-**Submitted:** 2026-09-08T17:11:16.929Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 4 MB (beats 100.00%)  
+**Submitted:** 2026-09-08T17:11:26.560Z  
 
 ```go
-class Solution {
-    public int countCommas(int n) {
-        if(n < 1000)    
-            return 0;
-        
-        return n - 999 ;
+func countCommas(n int) int {
+    if n < 1000 {
+        return 0
     }
+
+    return n - 999
+    
 }
 ```
 
